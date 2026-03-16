@@ -1,0 +1,156 @@
+.cardContainer {
+  perspective: 1000px;
+  height: 420px;
+  cursor: pointer;
+}
+
+.cardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.cardFront, .cardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: var(--bg-card);
+  border: 1px solid var(--bg-secondary);
+}
+
+.cardBack {
+  transform: rotateY(180deg);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.imageWrapper {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.techBadges {
+  position: absolute;
+  top: 0.8rem;
+  left: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.badge {
+  background-color: rgba(10, 10, 15, 0.85);
+  color: var(--accent-start);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-family: var(--font-mono);
+  border: 1px solid var(--accent-start);
+}
+
+.content {
+  padding: 1.2rem;
+}
+
+.title {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+  color: var(--text-primary);
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.footer {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 1.2rem;
+}
+
+.flipLabel {
+  font-size: 0.75rem;
+  color: var(--accent-end);
+  font-family: var(--font-mono);
+}
+
+.backTitle {
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+  color: var(--accent-start);
+}
+
+.detailsSection {
+  margin-bottom: 1.2rem;
+}
+
+.sectionHeading {
+  font-size: 0.8rem;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.detailsText {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.resultsList {
+  padding-left: 1rem;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.resultsList li {
+  margin-bottom: 0.2rem;
+}
+
+.links {
+  margin-top: auto;
+  display: flex;
+  gap: 1rem;
+}
+
+.iconLink {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  transition: var(--animation-fast);
+}
+
+.iconLink:hover {
+  color: var(--accent-start);
+}
+
+.backBtn {
+  position: absolute;
+  bottom: 1.2rem;
+  right: 1.2rem;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  text-decoration: underline;
+}
+@media (max-width: 767px) {
+  .cardContainer {
+    height: 450px;
+  }
+}

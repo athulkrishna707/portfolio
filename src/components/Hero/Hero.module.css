@@ -1,0 +1,142 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: radial-gradient(circle at center, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+  z-index: 10;
+}
+
+.content {
+  max-width: 800px;
+}
+
+.intro {
+  font-family: var(--font-mono);
+  color: var(--accent-start);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.name {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+}
+
+.typingContainer {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-mono);
+  height: 3rem;
+}
+
+.typingText {
+  color: var(--accent-end);
+  font-weight: 600;
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+}
+
+.cta {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.primaryBtn {
+  background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  box-shadow: 0 10px 20px rgba(0, 212, 255, 0.2);
+  transition: var(--animation-normal);
+}
+
+.primaryBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0, 212, 255, 0.3);
+}
+
+.secondaryBtn {
+  border: 1px solid var(--accent-start);
+  color: var(--accent-start);
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  transition: var(--animation-normal);
+}
+
+.secondaryBtn:hover {
+  background-color: var(--hover-overlay);
+  transform: translateY(-3px);
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mouse {
+  width: 25px;
+  height: 40px;
+  border: 2px solid var(--text-secondary);
+  border-radius: 12px;
+  position: relative;
+}
+
+.mouse::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 8px;
+  background-color: var(--accent-start);
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .name {
+    font-size: 2.5rem;
+  }
+  
+  .typingContainer {
+    font-size: 1.5rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+  }
+  
+  .cta {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .primaryBtn, .secondaryBtn {
+    text-align: center;
+  }
+}
